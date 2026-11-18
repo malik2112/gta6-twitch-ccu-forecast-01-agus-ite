@@ -21,7 +21,7 @@ category had already opened up everywhere and the day grows less;
 a narrow hour 1 (few channels for the viewers) means the launch was
 still concentrated and the audience fans out as more streamers go
 live. The two covariates are correlated, so the fit is ridge
-(penalty 2.0 on b_h and c_h, intercept unpenalised), solved in
+(penalty 0.5 on b_h and c_h, intercept unpenalised), solved in
 closed form on the 3x3 normal equations -- no iterative solver.
 
 Spread: no normal assumption at all. The five quantiles are the
@@ -62,7 +62,7 @@ OUTPUT_DIR = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 LEVELS = [0.05, 0.25, 0.5, 0.75, 0.95]
 LOG_P1_CENTER = 12.0
 LOG_CH_CENTER = 8.0
-RIDGE = 2.0
+RIDGE = 0.5
 MIN_ROWS_REGRESSION = 8
 SPREAD_MIN = 0.40   # min 5-95% gap, log units
 SPREAD_MAX = 1.60   # max 5-95% gap, log units

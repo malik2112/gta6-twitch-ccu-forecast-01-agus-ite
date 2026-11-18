@@ -44,7 +44,7 @@ streams. A broad hour 1 (many channels) means the category had already
 opened up everywhere and the day grows less; a narrow hour 1 (few
 channels for the viewers) means the launch was still concentrated and
 the audience fans out as more streamers go live. The two covariates
-are correlated, so the fit is ridge (penalty 2.0 on the slopes,
+are correlated, so the fit is ridge (penalty 0.5 on the slopes,
 intercept unpenalised), solved in closed form on the 3×3 normal
 equations.
 
@@ -71,7 +71,7 @@ loss on log scale:
 
 | set | this model | house persistence baseline |
 | --- | --- | --- |
-| all 37 usable comparables (× 4 practice cases) | **0.653** | 0.930 |
+| all 37 usable comparables (× 4 practice cases) | **0.650** | 0.930 |
 
 Local checks on the kit's four practice cases: outputs valid (23 rows,
 five non-decreasing quantiles each), byte-identical across two runs,
